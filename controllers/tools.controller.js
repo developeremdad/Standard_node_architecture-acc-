@@ -6,8 +6,7 @@ let tools = [
   
   module.exports.getAllTools = (req, res, next) => {
     const { limit, page } = req.query;
-    console.log(limit, page);
-    undefined.test();
+    console.log("Limit:",limit, "Page:", page);
     res.json(tools.slice(0, limit));
   };
   
