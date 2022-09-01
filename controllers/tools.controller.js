@@ -38,6 +38,7 @@ let tools = [
     const filter = { _id: id };
   
     const newData = tools.find(tool => tool.id === Number(id));
+    console.log(newData);
   
     newData.id = id;
     newData.name = req.body.name;
@@ -51,6 +52,7 @@ let tools = [
     const filter = { _id: id };
   
     tools = tools.filter(tool => tool.id !== Number(id));
+    console.log(tools);
   
     res.send(tools);
   };
